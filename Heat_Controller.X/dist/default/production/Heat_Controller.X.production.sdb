@@ -1,0 +1,92 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F26K42 ]
+[d frameptr 16353 ]
+"4 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"16 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"7467 /Applications/microchip/mplabx/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8/pic/include/proc/pic18f26k42.h
+[v _ANSELA ANSELA `VEuc  1 e 1 @14912 ]
+"8087
+[v _ANSELB ANSELB `VEuc  1 e 1 @14928 ]
+[s S68 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"45225
+[s S77 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+`uc 1 LA7 1 0 :1:7 
+]
+"45225
+[u S86 . 1 `S68 1 . 1 0 `S77 1 . 1 0 ]
+"45225
+"45225
+[v _LATAbits LATAbits `VES86  1 e 1 @16314 ]
+[s S28 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"45337
+[s S37 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+"45337
+[u S46 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
+"45337
+"45337
+[v _LATBbits LATBbits `VES46  1 e 1 @16315 ]
+"45534
+[v _TRISA TRISA `VEuc  1 e 1 @16322 ]
+"45596
+[v _TRISB TRISB `VEuc  1 e 1 @16323 ]
+"16 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"29
+} 0
