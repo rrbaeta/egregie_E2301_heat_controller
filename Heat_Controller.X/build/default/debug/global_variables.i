@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "global_variables.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "/Applications/microchip/xc8/v2.45/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
+# 1 "global_variables.c" 2
 
 
 
@@ -26161,188 +26161,38 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "/Applications/microchip/xc8/v2.45/pic/include/xc.h" 2 3
-# 10 "main.c" 2
+# 10 "global_variables.c" 2
 
-# 1 "./config.h" 1
-# 19 "./config.h"
-#pragma config FEXTOSC = OFF
-#pragma config RSTOSC = HFINTOSC_64MHZ
-
-
-#pragma config CLKOUTEN = OFF
-#pragma config PR1WAY = ON
-#pragma config CSWEN = ON
-#pragma config FCMEN = ON
-
-
-#pragma config MCLRE = EXTMCLR
-#pragma config PWRTS = PWRT_OFF
-#pragma config MVECEN = ON
-#pragma config IVT1WAY = ON
-#pragma config LPBOREN = OFF
-#pragma config BOREN = SBORDIS
-
-
-#pragma config BORV = VBOR_2P45
-#pragma config ZCD = OFF
-#pragma config PPS1WAY = ON
-#pragma config STVREN = ON
-#pragma config DEBUG = OFF
-#pragma config XINST = OFF
-
-
-#pragma config WDTCPS = WDTCPS_31
-#pragma config WDTE = OFF
-
-
-#pragma config WDTCWS = WDTCWS_7
-#pragma config WDTCCS = SC
-
-
-#pragma config BBSIZE = BBSIZE_512
-#pragma config BBEN = OFF
-#pragma config SAFEN = OFF
-#pragma config WRTAPP = OFF
-
-
-#pragma config WRTB = OFF
-#pragma config WRTC = OFF
-#pragma config WRTD = OFF
-#pragma config WRTSAF = OFF
-#pragma config LVP = ON
-
-
-#pragma config CP = OFF
-# 12 "main.c" 2
-# 1 "./isr.h" 1
-
-
-
-
-
-# 1 "/Applications/microchip/xc8/v2.45/pic/include/c99/stdbool.h" 1 3
-# 7 "./isr.h" 2
-
-struct Timers
+# 1 "./utils.h" 1
+# 15 "./utils.h"
+union UNION_16
 {
-    volatile _Bool t_10_ms;
-    volatile _Bool t_100_ms;
-    volatile _Bool t_1_s;
+    uint16_t value;
+
+    struct
+    {
+        uint8_t LOW;
+        uint8_t HIGH;
+    };
 };
 
-
-extern struct Timers timers;
-
-
-void isr_disable(void);
-void isr_enable(void);
-void init_timers(void);
-# 13 "main.c" 2
-# 1 "./adc.h" 1
-# 15 "./adc.h"
-void init_adc(void);
-# 14 "main.c" 2
-
-
-static _Bool flag_10_ms = 0;
-static _Bool flag_100_ms = 0;
-static _Bool flag_1_s = 0;
-
-
-void set_local_timer_flags(void);
-
-void main(void)
+union BITFIELD
 {
-    TRISA = 0b00000000;
-    ANSELA = 0b00001100;
-    LATA = 0;
-    TRISB = 0b00000000;
-    ANSELB = 0;
-    LATB = 0;
+    uint8_t value;
 
- isr_disable();
- init_timers();
- init_adc();
- isr_enable();
-
-
-    LATAbits.LATA7 = 0;
-
-    while(1)
+    struct
     {
-  set_local_timer_flags();
+        unsigned BIT0 : 1;
+        unsigned BIT1 : 1;
+        unsigned BIT2 : 1;
+        unsigned BIT3 : 1;
+        unsigned BIT4 : 1;
+        unsigned BIT5 : 1;
+        unsigned BIT6 : 1;
+        unsigned BIT7 : 1;
+    };
+};
+# 12 "global_variables.c" 2
 
-
-  if (flag_10_ms)
-  {
-
-  }
-
-  if (flag_100_ms)
-  {
-  }
-
-  if (flag_1_s)
-  {
-  }
-
-
-  if (flag_10_ms)
-  {
-  }
-
-  if (flag_100_ms)
-  {
-  }
-
-  if (flag_1_s)
-  {
-  }
-
-
-  if (flag_10_ms)
-  {
-  }
-
-  if (flag_100_ms)
-  {
-   LATAbits.LATA7 = !LATAbits.LATA7;
-  }
-
-  if (flag_1_s)
-  {
-  }
-
-
-  flag_10_ms = 0;
-  flag_100_ms = 0;
-  flag_1_s = 0;
-    }
-}
-
-void set_local_timer_flags(void)
-{
-  static _Bool old_10_ms = 0;
-  static _Bool old_100_ms = 0;
-  static _Bool old_1_s = 0;
-
-
-
-  if (old_10_ms != timers.t_10_ms)
-  {
-    old_10_ms = !old_10_ms;
-    flag_10_ms = 1;
-  }
-
-  if (old_100_ms != timers.t_100_ms)
-  {
-    old_100_ms = !old_100_ms;
-    flag_100_ms = 1;
-  }
-
-  if (old_1_s != timers.t_1_s)
-  {
-    old_1_s = !old_1_s;
-    flag_1_s = 1;
-  }
-}
+double thermistor_1 = 0;
+double thermistor_2 = 0;

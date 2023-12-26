@@ -27,13 +27,234 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 /Applications/microchip/xc8/v2.45/pic/sources/c99/common/Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"16 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+"10 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+[v _init_adc init_adc `(v  1 e 1 0 ]
+"15 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+[v _isr_disable isr_disable `(v  1 e 1 0 ]
+"20
+[v _isr_enable isr_enable `(v  1 e 1 0 ]
+"26
+[v _init_timers init_timers `(v  1 e 1 0 ]
+"40
+[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+"65
+[v _ADC_ISR ADC_ISR `IIH(v  1 e 1 0 ]
+"23 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"7467 /Applications/microchip/mplabx/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8/pic/include/proc/pic18f26k42.h
+"92
+[v _set_local_timer_flags set_local_timer_flags `(v  1 e 1 0 ]
+[s S556 . 1 `uc 1 INT0IE 1 0 :1:0 
+`uc 1 ZCDIE 1 0 :1:1 
+`uc 1 ADIE 1 0 :1:2 
+`uc 1 ADTIE 1 0 :1:3 
+`uc 1 C1IE 1 0 :1:4 
+`uc 1 SMT1IE 1 0 :1:5 
+`uc 1 SMT1PRAIE 1 0 :1:6 
+`uc 1 SMT1PWAIE 1 0 :1:7 
+]
+"3409 /Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h
+[u S565 . 1 `S556 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES565  1 e 1 @14737 ]
+[s S259 . 1 `uc 1 I2C1TXIE 1 0 :1:0 
+`uc 1 I2C1IE 1 0 :1:1 
+`uc 1 I2C1EIE 1 0 :1:2 
+`uc 1 U1RXIE 1 0 :1:3 
+`uc 1 U1TXIE 1 0 :1:4 
+`uc 1 U1EIE 1 0 :1:5 
+`uc 1 U1IE 1 0 :1:6 
+`uc 1 TMR0IE 1 0 :1:7 
+]
+"3533
+[u S268 . 1 `S259 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES268  1 e 1 @14739 ]
+[s S301 . 1 `uc 1 INT0IF 1 0 :1:0 
+`uc 1 ZCDIF 1 0 :1:1 
+`uc 1 ADIF 1 0 :1:2 
+`uc 1 ADTIF 1 0 :1:3 
+`uc 1 C1IF 1 0 :1:4 
+`uc 1 SMT1IF 1 0 :1:5 
+`uc 1 SMT1PRAIF 1 0 :1:6 
+`uc 1 SMT1PWAIF 1 0 :1:7 
+]
+"3974
+[u S310 . 1 `S301 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES310  1 e 1 @14753 ]
+[s S280 . 1 `uc 1 I2C1TXIF 1 0 :1:0 
+`uc 1 I2C1IF 1 0 :1:1 
+`uc 1 I2C1EIF 1 0 :1:2 
+`uc 1 U1RXIF 1 0 :1:3 
+`uc 1 U1TXIF 1 0 :1:4 
+`uc 1 U1EIF 1 0 :1:5 
+`uc 1 U1IF 1 0 :1:6 
+`uc 1 TMR0IF 1 0 :1:7 
+]
+"4098
+[u S289 . 1 `S280 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES289  1 e 1 @14755 ]
+"7467
 [v _ANSELA ANSELA `VEuc  1 e 1 @14912 ]
 "8087
 [v _ANSELB ANSELB `VEuc  1 e 1 @14928 ]
-[s S68 . 1 `uc 1 LATA0 1 0 :1:0 
+"29464
+[v _ADRESL ADRESL `VEuc  1 e 1 @16111 ]
+"29592
+[v _ADRESH ADRESH `VEuc  1 e 1 @16112 ]
+[s S514 . 1 `uc 1 ADPCH 1 0 :6:0 
+]
+"29741
+[s S516 . 1 `uc 1 ADPCH0 1 0 :1:0 
+`uc 1 ADPCH1 1 0 :1:1 
+`uc 1 ADPCH2 1 0 :1:2 
+`uc 1 ADPCH3 1 0 :1:3 
+`uc 1 ADPCH4 1 0 :1:4 
+`uc 1 ADPCH5 1 0 :1:5 
+]
+[s S523 . 1 `uc 1 PCH 1 0 :6:0 
+]
+[s S525 . 1 `uc 1 PCH0 1 0 :1:0 
+`uc 1 PCH1 1 0 :1:1 
+`uc 1 PCH2 1 0 :1:2 
+`uc 1 PCH3 1 0 :1:3 
+`uc 1 PCH4 1 0 :1:4 
+`uc 1 PCH5 1 0 :1:5 
+]
+[u S532 . 1 `S514 1 . 1 0 `S516 1 . 1 0 `S523 1 . 1 0 `S525 1 . 1 0 ]
+[v _ADPCHbits ADPCHbits `VES532  1 e 1 @16113 ]
+[s S385 . 1 `uc 1 GO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM 1 0 :2:2 
+`uc 1 CS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CONT 1 0 :1:6 
+`uc 1 ON 1 0 :1:7 
+]
+"30400
+[s S393 . 1 `uc 1 ADGO 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM 1 0 :2:2 
+`uc 1 ADCS 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 ADCONT 1 0 :1:6 
+`uc 1 ADON 1 0 :1:7 
+]
+[s S401 . 1 `uc 1 DONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 FM0 1 0 :1:2 
+]
+[s S405 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+]
+[s S407 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ADFM0 1 0 :1:2 
+]
+[u S411 . 1 `S385 1 . 1 0 `S393 1 . 1 0 `S401 1 . 1 0 `S405 1 . 1 0 `S407 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES411  1 e 1 @16120 ]
+[s S444 . 1 `uc 1 DSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 GPOL 1 0 :1:5 
+`uc 1 IPEN 1 0 :1:6 
+`uc 1 PPOL 1 0 :1:7 
+]
+"30501
+[s S450 . 1 `uc 1 ADDSEN 1 0 :1:0 
+`uc 1 . 1 0 :4:1 
+`uc 1 ADGPOL 1 0 :1:5 
+`uc 1 ADIPEN 1 0 :1:6 
+`uc 1 ADPPOL 1 0 :1:7 
+]
+[u S456 . 1 `S444 1 . 1 0 `S450 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES456  1 e 1 @16121 ]
+[s S472 . 1 `uc 1 CS 1 0 :6:0 
+]
+"31182
+[s S474 . 1 `uc 1 ADCS0 1 0 :1:0 
+`uc 1 ADCS1 1 0 :1:1 
+`uc 1 ADCS2 1 0 :1:2 
+`uc 1 ADCS3 1 0 :1:3 
+`uc 1 ADCS4 1 0 :1:4 
+`uc 1 ADCS5 1 0 :1:5 
+]
+[s S481 . 1 `uc 1 ADCS 1 0 :6:0 
+]
+[s S483 . 1 `uc 1 CS0 1 0 :1:0 
+`uc 1 CS1 1 0 :1:1 
+`uc 1 CS2 1 0 :1:2 
+`uc 1 CS3 1 0 :1:3 
+`uc 1 CS4 1 0 :1:4 
+`uc 1 CS5 1 0 :1:5 
+]
+[u S490 . 1 `S472 1 . 1 0 `S474 1 . 1 0 `S481 1 . 1 0 `S483 1 . 1 0 ]
+[v _ADCLKbits ADCLKbits `VES490  1 e 1 @16127 ]
+"44545
+[v _TMR0 TMR0 `VEuc  1 e 1 @16310 ]
+[s S148 . 1 `uc 1 OUTPS 1 0 :4:0 
+`uc 1 MD16 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"44966
+[s S154 . 1 `uc 1 T0OUTPS 1 0 :4:0 
+`uc 1 T0MD16 1 0 :1:4 
+`uc 1 T0OUT 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 T0EN 1 0 :1:7 
+]
+"44966
+[s S160 . 1 `uc 1 OUTPS0 1 0 :1:0 
+`uc 1 OUTPS1 1 0 :1:1 
+`uc 1 OUTPS2 1 0 :1:2 
+`uc 1 OUTPS3 1 0 :1:3 
+`uc 1 T016BIT 1 0 :1:4 
+]
+"44966
+[s S166 . 1 `uc 1 T0OUTPS0 1 0 :1:0 
+`uc 1 T0OUTPS1 1 0 :1:1 
+`uc 1 T0OUTPS2 1 0 :1:2 
+`uc 1 T0OUTPS3 1 0 :1:3 
+]
+"44966
+[u S171 . 1 `S148 1 . 1 0 `S154 1 . 1 0 `S160 1 . 1 0 `S166 1 . 1 0 ]
+"44966
+"44966
+[v _T0CON0bits T0CON0bits `VES171  1 e 1 @16312 ]
+[s S200 . 1 `uc 1 CKPS 1 0 :4:0 
+`uc 1 ASYNC 1 0 :1:4 
+`uc 1 CS 1 0 :3:5 
+]
+"45093
+[s S204 . 1 `uc 1 CKPS0 1 0 :1:0 
+`uc 1 CKPS1 1 0 :1:1 
+`uc 1 CKPS2 1 0 :1:2 
+`uc 1 CKPS3 1 0 :1:3 
+`uc 1 T0ASYNC 1 0 :1:4 
+`uc 1 CS0 1 0 :1:5 
+`uc 1 CS1 1 0 :1:6 
+`uc 1 CS2 1 0 :1:7 
+]
+"45093
+[s S213 . 1 `uc 1 T0CKPS 1 0 :4:0 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS 1 0 :3:5 
+]
+"45093
+[s S217 . 1 `uc 1 T0CKPS0 1 0 :1:0 
+`uc 1 T0CKPS1 1 0 :1:1 
+`uc 1 T0CKPS2 1 0 :1:2 
+`uc 1 T0CKPS3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 T0CS0 1 0 :1:5 
+`uc 1 T0CS1 1 0 :1:6 
+`uc 1 T0CS2 1 0 :1:7 
+]
+"45093
+[u S226 . 1 `S200 1 . 1 0 `S204 1 . 1 0 `S213 1 . 1 0 `S217 1 . 1 0 ]
+"45093
+"45093
+[v _T0CON1bits T0CON1bits `VES226  1 e 1 @16313 ]
+"45198
+[v _LATA LATA `VEuc  1 e 1 @16314 ]
+[s S46 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -43,7 +264,7 @@
 `uc 1 LATA7 1 0 :1:7 
 ]
 "45225
-[s S77 . 1 `uc 1 LA0 1 0 :1:0 
+[s S55 . 1 `uc 1 LA0 1 0 :1:0 
 `uc 1 LA1 1 0 :1:1 
 `uc 1 LA2 1 0 :1:2 
 `uc 1 LA3 1 0 :1:3 
@@ -53,40 +274,91 @@
 `uc 1 LA7 1 0 :1:7 
 ]
 "45225
-[u S86 . 1 `S68 1 . 1 0 `S77 1 . 1 0 ]
+[u S64 . 1 `S46 1 . 1 0 `S55 1 . 1 0 ]
 "45225
 "45225
-[v _LATAbits LATAbits `VES86  1 e 1 @16314 ]
-[s S28 . 1 `uc 1 LATB0 1 0 :1:0 
-`uc 1 LATB1 1 0 :1:1 
-`uc 1 LATB2 1 0 :1:2 
-`uc 1 LATB3 1 0 :1:3 
-`uc 1 LATB4 1 0 :1:4 
-`uc 1 LATB5 1 0 :1:5 
-`uc 1 LATB6 1 0 :1:6 
-`uc 1 LATB7 1 0 :1:7 
-]
-"45337
-[s S37 . 1 `uc 1 LB0 1 0 :1:0 
-`uc 1 LB1 1 0 :1:1 
-`uc 1 LB2 1 0 :1:2 
-`uc 1 LB3 1 0 :1:3 
-`uc 1 LB4 1 0 :1:4 
-`uc 1 LB5 1 0 :1:5 
-`uc 1 LB6 1 0 :1:6 
-`uc 1 LB7 1 0 :1:7 
-]
-"45337
-[u S46 . 1 `S28 1 . 1 0 `S37 1 . 1 0 ]
-"45337
-"45337
-[v _LATBbits LATBbits `VES46  1 e 1 @16315 ]
+[v _LATAbits LATAbits `VES64  1 e 1 @16314 ]
+"45310
+[v _LATB LATB `VEuc  1 e 1 @16315 ]
 "45534
 [v _TRISA TRISA `VEuc  1 e 1 @16322 ]
 "45596
 [v _TRISB TRISB `VEuc  1 e 1 @16323 ]
+[s S122 . 1 `uc 1 INT0EDG 1 0 :1:0 
+`uc 1 INT1EDG 1 0 :1:1 
+`uc 1 INT2EDG 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 IPEN 1 0 :1:5 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"45947
+[s S130 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 GIEH 1 0 :1:7 
+]
+"45947
+[u S133 . 1 `S122 1 . 1 0 `S130 1 . 1 0 ]
+"45947
+"45947
+[v _INTCON0bits INTCON0bits `VES133  1 e 1 @16338 ]
+[s S90 Timers 3 `VEa 1 t_10_ms 1 0 `VEa 1 t_100_ms 1 1 `VEa 1 t_1_s 1 2 ]
+"13 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+[v _timers timers `VES90  1 e 3 0 ]
 "16 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+[v _flag_10_ms flag_10_ms `a  1 s 1 flag_10_ms ]
+"17
+[v _flag_100_ms flag_100_ms `a  1 s 1 flag_100_ms ]
+"18
+[v _flag_1_s flag_1_s `a  1 s 1 flag_1_s ]
+"23
 [v _main main `(v  1 e 1 0 ]
 {
+"90
+} 0
+"92
+[v _set_local_timer_flags set_local_timer_flags `(v  1 e 1 0 ]
+{
+"94
+[v set_local_timer_flags@old_10_ms old_10_ms `a  1 s 1 old_10_ms ]
+"95
+[v set_local_timer_flags@old_100_ms old_100_ms `a  1 s 1 old_100_ms ]
+"96
+[v set_local_timer_flags@old_1_s old_1_s `a  1 s 1 old_1_s ]
+"117
+} 0
+"20 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+[v _isr_enable isr_enable `(v  1 e 1 0 ]
+{
+"24
+} 0
+"15
+[v _isr_disable isr_disable `(v  1 e 1 0 ]
+{
+"18
+} 0
+"26
+[v _init_timers init_timers `(v  1 e 1 0 ]
+{
+"38
+} 0
+"10 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+[v _init_adc init_adc `(v  1 e 1 0 ]
+{
 "29
+} 0
+"40 /Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+[v _TMR0_ISR TMR0_ISR `IIH(v  1 e 1 0 ]
+{
+"45
+[v TMR0_ISR@counter_1_s counter_1_s `VEuc  1 s 1 counter_1_s ]
+"46
+[v TMR0_ISR@counter_100_ms counter_100_ms `VEuc  1 s 1 counter_100_ms ]
+"63
+} 0
+"65
+[v _ADC_ISR ADC_ISR `IIH(v  1 e 1 0 ]
+{
+"70
+[v ADC_ISR@adc_value_high adc_value_high `us  1 a 2 0 ]
+"77
 } 0

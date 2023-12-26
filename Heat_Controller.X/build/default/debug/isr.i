@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "isr.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "/Applications/microchip/xc8/v2.45/pic/include/language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-
+# 1 "isr.c" 2
 
 
 
@@ -26161,8 +26160,32 @@ __attribute__((__unsupported__("The READTIMER" "0" "() macro is not available wi
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 34 "/Applications/microchip/xc8/v2.45/pic/include/xc.h" 2 3
-# 10 "main.c" 2
+# 9 "isr.c" 2
 
+# 1 "./isr.h" 1
+
+
+
+
+
+# 1 "/Applications/microchip/xc8/v2.45/pic/include/c99/stdbool.h" 1 3
+# 7 "./isr.h" 2
+
+struct Timers
+{
+    volatile _Bool t_10_ms;
+    volatile _Bool t_100_ms;
+    volatile _Bool t_1_s;
+};
+
+
+extern struct Timers timers;
+
+
+void isr_disable(void);
+void isr_enable(void);
+void init_timers(void);
+# 11 "isr.c" 2
 # 1 "./config.h" 1
 # 19 "./config.h"
 #pragma config FEXTOSC = OFF
@@ -26213,136 +26236,123 @@ unsigned char __t3rd16on(void);
 
 
 #pragma config CP = OFF
-# 12 "main.c" 2
-# 1 "./isr.h" 1
-
-
-
-
-
-# 1 "/Applications/microchip/xc8/v2.45/pic/include/c99/stdbool.h" 1 3
-# 7 "./isr.h" 2
-
-struct Timers
+# 12 "isr.c" 2
+# 1 "./utils.h" 1
+# 15 "./utils.h"
+union UNION_16
 {
-    volatile _Bool t_10_ms;
-    volatile _Bool t_100_ms;
-    volatile _Bool t_1_s;
+    uint16_t value;
+
+    struct
+    {
+        uint8_t LOW;
+        uint8_t HIGH;
+    };
 };
 
-
-extern struct Timers timers;
-
-
-void isr_disable(void);
-void isr_enable(void);
-void init_timers(void);
-# 13 "main.c" 2
-# 1 "./adc.h" 1
-# 15 "./adc.h"
-void init_adc(void);
-# 14 "main.c" 2
-
-
-static _Bool flag_10_ms = 0;
-static _Bool flag_100_ms = 0;
-static _Bool flag_1_s = 0;
-
-
-void set_local_timer_flags(void);
-
-void main(void)
+union BITFIELD
 {
-    TRISA = 0b00000000;
-    ANSELA = 0b00001100;
-    LATA = 0;
-    TRISB = 0b00000000;
-    ANSELB = 0;
-    LATB = 0;
+    uint8_t value;
 
- isr_disable();
- init_timers();
- init_adc();
- isr_enable();
-
-
-    LATAbits.LATA7 = 0;
-
-    while(1)
+    struct
     {
-  set_local_timer_flags();
+        unsigned BIT0 : 1;
+        unsigned BIT1 : 1;
+        unsigned BIT2 : 1;
+        unsigned BIT3 : 1;
+        unsigned BIT4 : 1;
+        unsigned BIT5 : 1;
+        unsigned BIT6 : 1;
+        unsigned BIT7 : 1;
+    };
+};
+# 13 "isr.c" 2
+# 1 "./global_variables.h" 1
+# 18 "./global_variables.h"
+extern double thermistor_1;
+extern double thermistor_2;
+# 14 "isr.c" 2
 
+struct Timers timers = {0};
 
-  if (flag_10_ms)
-  {
+void isr_disable(void)
+{
+ INTCON0bits.GIE = 0;
+}
 
-  }
+void isr_enable(void)
+{
+    INTCON0bits.IPEN = 0;
+ INTCON0bits.GIE = 1;
+}
 
-  if (flag_100_ms)
-  {
-  }
+void init_timers(void)
+{
 
-  if (flag_1_s)
-  {
-  }
+ T0CON0bits.EN = 0;
+ T0CON0bits.OUTPS = 0b0000;
+ T0CON0bits.MD16 = 0;
+ T0CON1bits.CS = 0b101;
+ T0CON1bits.CKPS = 0b0110;
+ TMR0 = 178;
 
+ T0CON0bits.EN = 1;
+ PIE3bits.TMR0IE = 1;
+}
 
-  if (flag_10_ms)
-  {
-  }
+void __attribute__((picinterrupt(("irq(31)")))) TMR0_ISR(void)
+{
+ PIR3bits.TMR0IF = 0;
+ TMR0 = 178;
 
-  if (flag_100_ms)
-  {
-  }
+    volatile static uint8_t counter_1_s = 10;
+    volatile static uint8_t counter_100_ms = 10;
 
-  if (flag_1_s)
-  {
-  }
+    timers.t_10_ms = !timers.t_10_ms;
 
+    counter_100_ms--;
+    if(!counter_100_ms)
+    {
+        timers.t_100_ms = !timers.t_100_ms;
+        counter_100_ms = 10;
 
-  if (flag_10_ms)
-  {
-  }
-
-  if (flag_100_ms)
-  {
-   LATAbits.LATA7 = !LATAbits.LATA7;
-  }
-
-  if (flag_1_s)
-  {
-  }
-
-
-  flag_10_ms = 0;
-  flag_100_ms = 0;
-  flag_1_s = 0;
+        counter_1_s--;
+        if (!counter_1_s)
+        {
+            timers.t_1_s = !timers.t_1_s;
+            counter_1_s = 10;
+        }
     }
 }
 
-void set_local_timer_flags(void)
+void __attribute__((picinterrupt(("irq(10)")))) ADC_ISR(void)
 {
-  static _Bool old_10_ms = 0;
-  static _Bool old_100_ms = 0;
-  static _Bool old_1_s = 0;
+ PIR1bits.ADIF = 0;
 
+ static uint8_t stage = 0;
+ union UNION_16 adc_value = {0};
 
+ adc_value.value = ADRES;
 
-  if (old_10_ms != timers.t_10_ms)
-  {
-    old_10_ms = !old_10_ms;
-    flag_10_ms = 1;
-  }
+ switch(stage)
+ {
+  case 0:
+   thermistor_1 = (adc_value.value * 3.3) / 4096;
 
-  if (old_100_ms != timers.t_100_ms)
-  {
-    old_100_ms = !old_100_ms;
-    flag_100_ms = 1;
-  }
+   break;
 
-  if (old_1_s != timers.t_1_s)
-  {
-    old_1_s = !old_1_s;
-    flag_1_s = 1;
-  }
+  case 1:
+   thermistor_2 = (adc_value.value * 3.3) / 4096;
+
+   break;
+
+  default:
+   break;
+ }
+
+ __nop();
+ __nop();
+ __nop();
+
+ ADCON0bits.GO = 1;
 }

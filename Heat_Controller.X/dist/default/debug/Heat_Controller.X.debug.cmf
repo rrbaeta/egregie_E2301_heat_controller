@@ -11,14 +11,30 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcsiNLMda/driver_tmp_9.o
-init CODE 0 FFFC FFFC 4 1 2
+$/tmp/xcOjYephg/driver_tmp_9.o
+init CODE 0 AE AE 4 1 2
 reset_vec CODE 0 0 0 4 1 2
 config CONFIG 4 300000 300000 A 1 1
 $dist/default/debug/Heat_Controller.X.debug.o
-cinit CODE 0 1026 1026 6 1 2
-text0 CODE 0 1002 1002 24 1 2
+ivt0x8 CODE 0 8 8 A6 1 2
+cinit CODE 0 1C48 1C48 3E 1 2
+text0 CODE 0 1B54 1B54 7A 1 2
+text1 CODE 0 1ACE 1ACE 86 1 2
+text2 CODE 0 1CDA 1CDA 6 1 2
+text3 CODE 0 1CE0 1CE0 4 1 2
+text4 CODE 0 1CB6 1CB6 24 1 2
+text5 CODE 0 1C86 1C86 30 1 2
+text6 CODE 0 1BD0 1BD0 78 1 4
+text7 CODE 0 19A0 19A0 12E 1 4
+text8 CODE 0 17EA 17EA 1B4 1 2
+text9 CODE 0 1002 1002 44E 1 2
+text10 CODE 0 1450 1450 39A 1 2
+idataCOMRAM CODE 0 1CE4 1CE4 2 1 1
+cstackCOMRAM COMRAM 1 1 1 44 1 1
+cstackBANK0 BANK0 1 60 60 1 1 1
 smallconst SMALLCONST 0 1000 1000 2 1 2
+dataCOMRAM COMRAM 1 59 59 2 1 1
+bssCOMRAM COMRAM 1 45 45 14 1 1
 config CONFIG 4 300000 300000 A 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -26,9 +42,9 @@ config CONFIG 4 300000 300000 A 1 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 60-FFF 1
+RAM 61-FFF 1
 SFR 3800-3FFF 1
-BANK0 60-FF 1
+BANK0 61-FF 1
 BANK1 100-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3FF 1
@@ -38,23 +54,34 @@ BANK6 600-6FF 1
 BANK7 700-7FF 1
 BANK8 800-8FF 1
 BANK9 900-9FF 1
-CONST 4-FFF 1
-CONST 102C-FFFB 1
+CONST 4-7 1
+CONST B2-FFF 1
+CONST 199E-199F 1
+CONST 1BCE-1BCF 1
+CONST 1CE6-FFFF 1
 IDLOC 200000-20000F 1
-SMALLCONST 102C-FFFB 1
-CODE 4-FFF 1
-CODE 102C-FFFB 1
+SMALLCONST 199E-199F 1
+SMALLCONST 1BCE-1BCF 1
+SMALLCONST 1CE6-FFFF 1
+CODE 4-7 1
+CODE B2-FFF 1
+CODE 199E-199F 1
+CODE 1BCE-1BCF 1
+CODE 1CE6-FFFF 1
 BANK10 A00-AFF 1
 BANK11 B00-BFF 1
 BANK12 C00-CFF 1
 BANK13 D00-DFF 1
 BANK14 E00-EFF 1
 BANK15 F00-FFF 1
-BIGRAM 1-FFF 1
+BIGRAM 5B-5F 1
+BIGRAM 61-FFF 1
 BIGSFR 3800-3FFF 1
-COMRAM 1-5F 1
+COMRAM 5B-5F 1
 EEDATA 310000-3103FF 1
-MEDIUMCONST 102C-FFFB 1
+MEDIUMCONST 199E-199F 1
+MEDIUMCONST 1BCE-1BCF 1
+MEDIUMCONST 1CE6-FFFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -69,22 +96,332 @@ MEDIUMCONST 102C-FFFB 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug/Heat_Controller.X.debug.o
-1002 text0 CODE >16:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-1002 text0 CODE >18:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-1006 text0 CODE >19:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-100C text0 CODE >20:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-1010 text0 CODE >21:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-1014 text0 CODE >22:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-1018 text0 CODE >23:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-101C text0 CODE >26:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-101E text0 CODE >28:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-101E text0 CODE >30:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
-1026 cinit CODE >1612:/tmp/xcsiNLMda/driver_tmp_1.s
-1026 cinit CODE >1614:/tmp/xcsiNLMda/driver_tmp_1.s
-1026 cinit CODE >1617:/tmp/xcsiNLMda/driver_tmp_1.s
-1026 cinit CODE >1623:/tmp/xcsiNLMda/driver_tmp_1.s
-1026 cinit CODE >1625:/tmp/xcsiNLMda/driver_tmp_1.s
-1028 cinit CODE >1626:/tmp/xcsiNLMda/driver_tmp_1.s
+1450 text10 CODE >11:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1450 text10 CODE >26:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1456 text10 CODE >27:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+145C text10 CODE >28:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+146A text10 CODE >29:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+146C text10 CODE >33:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+147C text10 CODE >35:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+148C text10 CODE >37:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+149C text10 CODE >40:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+149E text10 CODE >42:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14A2 text10 CODE >43:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14A6 text10 CODE >46:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14B6 text10 CODE >49:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14BC text10 CODE >50:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14C2 text10 CODE >51:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14D0 text10 CODE >52:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14D2 text10 CODE >56:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14E2 text10 CODE >58:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+14F2 text10 CODE >60:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1502 text10 CODE >63:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1504 text10 CODE >65:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1508 text10 CODE >66:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+150C text10 CODE >69:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+151C text10 CODE >75:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1532 text10 CODE >76:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1542 text10 CODE >77:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+154A text10 CODE >78:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+154E text10 CODE >79:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1562 text10 CODE >83:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1572 text10 CODE >84:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1572 text10 CODE >85:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1586 text10 CODE >89:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15A0 text10 CODE >92:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15B0 text10 CODE >93:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15C0 text10 CODE >94:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15D0 text10 CODE >96:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15D4 text10 CODE >97:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15D8 text10 CODE >100:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15E8 text10 CODE >101:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15F2 text10 CODE >102:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+15FC text10 CODE >103:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+160A text10 CODE >104:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+160C text10 CODE >105:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+160C text10 CODE >106:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1616 text10 CODE >112:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1634 text10 CODE >115:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1636 text10 CODE >116:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1646 text10 CODE >118:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1648 text10 CODE >97:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1648 text10 CODE >119:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1658 text10 CODE >122:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+166E text10 CODE >123:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1674 text10 CODE >128:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+167E text10 CODE >129:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+168C text10 CODE >130:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+168E text10 CODE >131:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+168E text10 CODE >132:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1698 text10 CODE >133:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+169E text10 CODE >127:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+16AC text10 CODE >139:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+16B0 text10 CODE >140:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+16BE text10 CODE >141:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+16EC text10 CODE >142:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+16F0 text10 CODE >143:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+16F4 text10 CODE >144:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+16F4 text10 CODE >145:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1706 text10 CODE >149:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1706 text10 CODE >150:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1716 text10 CODE >151:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1722 text10 CODE >152:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1730 text10 CODE >153:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+175A text10 CODE >154:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+175E text10 CODE >159:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1778 text10 CODE >160:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+177E text10 CODE >161:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+178E text10 CODE >165:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17A8 text10 CODE >166:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17B0 text10 CODE >167:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17C0 text10 CODE >169:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17C4 text10 CODE >173:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17C8 text10 CODE >175:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17D6 text10 CODE >176:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17D8 text10 CODE >177:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17DC text10 CODE >180:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17DE text10 CODE >182:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+17E8 text10 CODE >185:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+1002 text9 CODE >8:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1002 text9 CODE >17:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1008 text9 CODE >18:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+100E text9 CODE >19:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+101C text9 CODE >20:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+101E text9 CODE >24:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+102E text9 CODE >26:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+103E text9 CODE >28:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+104E text9 CODE >31:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1050 text9 CODE >33:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1054 text9 CODE >36:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1064 text9 CODE >39:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+106A text9 CODE >40:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1070 text9 CODE >41:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+107E text9 CODE >42:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1080 text9 CODE >45:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1090 text9 CODE >48:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+10A0 text9 CODE >50:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+10B0 text9 CODE >53:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+10B2 text9 CODE >54:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+10B6 text9 CODE >57:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+10C6 text9 CODE >58:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+10C6 text9 CODE >65:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+10E6 text9 CODE >66:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+10FA text9 CODE >95:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+110A text9 CODE >96:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1114 text9 CODE >97:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+111E text9 CODE >98:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+112E text9 CODE >99:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+113A text9 CODE >100:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1146 text9 CODE >101:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1156 text9 CODE >102:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1162 text9 CODE >103:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+116E text9 CODE >104:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+117C text9 CODE >105:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+118C text9 CODE >106:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+119C text9 CODE >107:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+11AC text9 CODE >108:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+11BC text9 CODE >109:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+11CA text9 CODE >110:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+11DA text9 CODE >111:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+11EA text9 CODE >112:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+11FA text9 CODE >113:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+120A text9 CODE >114:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+121A text9 CODE >115:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+122A text9 CODE >116:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+123A text9 CODE >117:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1264 text9 CODE >145:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+129A text9 CODE >146:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12A8 text9 CODE >149:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12C2 text9 CODE >152:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12C6 text9 CODE >153:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12D0 text9 CODE >154:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12DE text9 CODE >155:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12E0 text9 CODE >156:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12E0 text9 CODE >157:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12EA text9 CODE >158:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12F0 text9 CODE >152:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+12FE text9 CODE >163:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1302 text9 CODE >164:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1310 text9 CODE >165:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+133E text9 CODE >166:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1342 text9 CODE >167:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1346 text9 CODE >168:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1346 text9 CODE >169:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1358 text9 CODE >173:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1358 text9 CODE >174:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1368 text9 CODE >175:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1374 text9 CODE >176:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1382 text9 CODE >177:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+13AC text9 CODE >178:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+13B0 text9 CODE >183:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+13CA text9 CODE >184:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+13DA text9 CODE >185:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+13DE text9 CODE >187:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+13F8 text9 CODE >188:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1408 text9 CODE >190:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+140C text9 CODE >191:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1410 text9 CODE >192:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1410 text9 CODE >194:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1414 text9 CODE >195:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1424 text9 CODE >196:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1432 text9 CODE >197:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+1434 text9 CODE >199:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+143A text9 CODE >201:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+143E text9 CODE >203:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+144E text9 CODE >205:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+17EA text8 CODE >10:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+17EC text8 CODE >15:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+180A text8 CODE >16:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+183C text8 CODE >17:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1840 text8 CODE >18:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1840 text8 CODE >19:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1850 text8 CODE >21:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1866 text8 CODE >22:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+187A text8 CODE >23:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+187E text8 CODE >24:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1882 text8 CODE >25:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1884 text8 CODE >26:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+188E text8 CODE >24:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+18C0 text8 CODE >29:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+18C2 text8 CODE >30:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+18CE text8 CODE >31:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+18D8 text8 CODE >28:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+18D8 text8 CODE >32:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+190A text8 CODE >34:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+190C text8 CODE >35:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1916 text8 CODE >33:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1934 text8 CODE >37:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1942 text8 CODE >38:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1944 text8 CODE >39:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+1948 text8 CODE >40:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+196C text8 CODE >41:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+198A text8 CODE >42:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+198C text8 CODE >43:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+199C text8 CODE >44:/Applications/microchip/xc8/v2.45/pic/sources/c99/common/xxtofl.c
+19A0 text7 CODE >65:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+19A0 text7 CODE >67:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+19A0 text7 CODE >69:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+19A4 text7 CODE >72:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+19AC text7 CODE >74:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+19B8 text7 CODE >76:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+19BC text7 CODE >79:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1A26 text7 CODE >81:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1A2A text7 CODE >84:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1A94 text7 CODE >86:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1A98 text7 CODE >90:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1AA2 text7 CODE >90:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1AB0 text7 CODE >90:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1AB8 text7 CODE >90:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1AC2 text7 CODE >92:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1AC4 text7 CODE >93:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1AC6 text7 CODE >94:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1AC8 text7 CODE >96:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1ACC text7 CODE >97:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1BD0 text6 CODE >31:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1BD0 text6 CODE >42:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1BD0 text6 CODE >44:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1BD4 text6 CODE >45:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1BD8 text6 CODE >50:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1BEE text6 CODE >52:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1BF0 text6 CODE >53:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1C00 text6 CODE >55:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1C16 text6 CODE >56:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1C1A text6 CODE >58:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1C1C text6 CODE >59:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1C2C text6 CODE >61:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1C42 text6 CODE >62:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1C46 text6 CODE >65:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1C86 text5 CODE >12:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C86 text5 CODE >13:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C8A text5 CODE >15:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C8C text5 CODE >16:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C8E text5 CODE >17:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C96 text5 CODE >19:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C98 text5 CODE >20:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C9A text5 CODE >21:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C9C text5 CODE >22:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1C9E text5 CODE >24:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1CA2 text5 CODE >25:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1CAA text5 CODE >27:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1CAE text5 CODE >29:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1CB2 text5 CODE >30:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1CB4 text5 CODE >31:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/adc.c
+1CB6 text4 CODE >28:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CB6 text4 CODE >31:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CB8 text4 CODE >32:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CBC text4 CODE >33:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CBE text4 CODE >34:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CC6 text4 CODE >35:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CCE text4 CODE >36:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CD2 text4 CODE >38:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CD4 text4 CODE >39:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CD8 text4 CODE >40:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CE0 text3 CODE >17:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CE0 text3 CODE >19:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CE2 text3 CODE >20:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CDA text2 CODE >22:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CDA text2 CODE >24:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CDC text2 CODE >25:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1CDE text2 CODE >26:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/isr.c
+1ACE text1 CODE >92:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1ACE text1 CODE >100:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1AE0 text1 CODE >102:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1AF6 text1 CODE >103:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1AFA text1 CODE >106:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B0C text1 CODE >108:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B22 text1 CODE >109:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B26 text1 CODE >112:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B38 text1 CODE >114:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B4E text1 CODE >115:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B52 text1 CODE >117:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B54 text0 CODE >23:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B54 text0 CODE >25:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B58 text0 CODE >26:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B5E text0 CODE >27:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B62 text0 CODE >28:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B66 text0 CODE >29:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B6A text0 CODE >30:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B6E text0 CODE >32:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B72 text0 CODE >33:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B76 text0 CODE >34:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B7A text0 CODE >35:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B7E text0 CODE >38:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B80 text0 CODE >42:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B84 text0 CODE >76:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1B94 text0 CODE >78:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1BBA text0 CODE >86:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1BBE text0 CODE >87:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1BC2 text0 CODE >88:/Users/rodrigobaeta/Documents/Coding_Projects/Embedded/Heat_Controller.X/main.c
+1C48 cinit CODE >6013:/tmp/xcOjYephg/driver_tmp_1.s
+1C48 cinit CODE >6015:/tmp/xcOjYephg/driver_tmp_1.s
+1C48 cinit CODE >6018:/tmp/xcOjYephg/driver_tmp_1.s
+1C48 cinit CODE >6065:/tmp/xcOjYephg/driver_tmp_1.s
+1C4A cinit CODE >6066:/tmp/xcOjYephg/driver_tmp_1.s
+1C4C cinit CODE >6067:/tmp/xcOjYephg/driver_tmp_1.s
+1C4E cinit CODE >6068:/tmp/xcOjYephg/driver_tmp_1.s
+1C50 cinit CODE >6069:/tmp/xcOjYephg/driver_tmp_1.s
+1C52 cinit CODE >6070:/tmp/xcOjYephg/driver_tmp_1.s
+1C54 cinit CODE >6071:/tmp/xcOjYephg/driver_tmp_1.s
+1C56 cinit CODE >6072:/tmp/xcOjYephg/driver_tmp_1.s
+1C5C cinit CODE >6073:/tmp/xcOjYephg/driver_tmp_1.s
+1C5E cinit CODE >6074:/tmp/xcOjYephg/driver_tmp_1.s
+1C64 cinit CODE >6078:/tmp/xcOjYephg/driver_tmp_1.s
+1C68 cinit CODE >6079:/tmp/xcOjYephg/driver_tmp_1.s
+1C6A cinit CODE >6080:/tmp/xcOjYephg/driver_tmp_1.s
+1C6A cinit CODE >6081:/tmp/xcOjYephg/driver_tmp_1.s
+1C6C cinit CODE >6082:/tmp/xcOjYephg/driver_tmp_1.s
+1C6E cinit CODE >6083:/tmp/xcOjYephg/driver_tmp_1.s
+1C70 cinit CODE >6091:/tmp/xcOjYephg/driver_tmp_1.s
+1C72 cinit CODE >6092:/tmp/xcOjYephg/driver_tmp_1.s
+1C74 cinit CODE >6093:/tmp/xcOjYephg/driver_tmp_1.s
+1C76 cinit CODE >6094:/tmp/xcOjYephg/driver_tmp_1.s
+1C78 cinit CODE >6095:/tmp/xcOjYephg/driver_tmp_1.s
+1C7A cinit CODE >6096:/tmp/xcOjYephg/driver_tmp_1.s
+1C7C cinit CODE >6102:/tmp/xcOjYephg/driver_tmp_1.s
+1C7C cinit CODE >6105:/tmp/xcOjYephg/driver_tmp_1.s
+1C7E cinit CODE >6106:/tmp/xcOjYephg/driver_tmp_1.s
+1C80 cinit CODE >6107:/tmp/xcOjYephg/driver_tmp_1.s
+1C82 cinit CODE >6108:/tmp/xcOjYephg/driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -98,41 +435,73 @@ $dist/default/debug/Heat_Controller.X.debug.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug/Heat_Controller.X.debug.o
-__Hspace_0 10000 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
-__Hspace_1 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+__Hspace_0 1CE6 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+__Hspace_1 61 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __Hspace_2 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __Hspace_4 60000A 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/debug/Heat_Controller.X.debug.o
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcsiNLMda/driver_tmp_9.o
+__end_of_isr_disable 1CE4 0 CODE 0 text3 dist/default/debug/Heat_Controller.X.debug.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcOjYephg/driver_tmp_9.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug/Heat_Controller.X.debug.o
+ADC_ISR@adc_value 43 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug/Heat_Controller.X.debug.o
 __Lsmallconst 1000 0 SMALLCONST 0 smallconst dist/default/debug/Heat_Controller.X.debug.o
 _LATA 3FBA 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 _LATB 3FBB 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
-___sp 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
-_main 1002 0 CODE 0 text0 dist/default/debug/Heat_Controller.X.debug.o
-___stack_hi 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
-___stack_lo 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
-start FFFC 0 CODE 0 init /tmp/xcsiNLMda/driver_tmp_9.o
+_TMR0 3FB6 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+___sp 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
+_main 1B54 0 CODE 0 text0 dist/default/debug/Heat_Controller.X.debug.o
+___stack_hi 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
+start AE 0 CODE 0 init /tmp/xcOjYephg/driver_tmp_9.o
+___flmul@aexp 20 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___flmul@bexp 21 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___flmul@prod 22 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___flmul@sign 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___flmul@temp 26 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+ADC_ISR@stage 52 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Hpowerup 0 0 CODE 0 powerup dist/default/debug/Heat_Controller.X.debug.o
-__accesstop 60 0 ABS 0 - /tmp/xcsiNLMda/driver_tmp_9.o
-intlevel0 0 0 CODE 0 text /tmp/xcsiNLMda/driver_tmp_9.o
-intlevel1 0 0 CODE 0 text /tmp/xcsiNLMda/driver_tmp_9.o
-intlevel2 0 0 CODE 0 text /tmp/xcsiNLMda/driver_tmp_9.o
-intlevel3 0 0 CODE 0 text /tmp/xcsiNLMda/driver_tmp_9.o
+_isr_enable 1CDA 0 CODE 0 text2 dist/default/debug/Heat_Controller.X.debug.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+__accesstop 60 0 ABS 0 - /tmp/xcOjYephg/driver_tmp_9.o
+intlevel0 0 0 CODE 0 text /tmp/xcOjYephg/driver_tmp_9.o
+intlevel1 0 0 CODE 0 text /tmp/xcOjYephg/driver_tmp_9.o
+intlevel2 0 0 CODE 0 text /tmp/xcOjYephg/driver_tmp_9.o
+intlevel3 0 0 CODE 0 text /tmp/xcOjYephg/driver_tmp_9.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+_init_adc 1C86 0 CODE 0 text5 dist/default/debug/Heat_Controller.X.debug.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug/Heat_Controller.X.debug.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/debug/Heat_Controller.X.debug.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/debug/Heat_Controller.X.debug.o
+__end_of_init_adc 1CB6 0 CODE 0 text5 dist/default/debug/Heat_Controller.X.debug.o
+__pidataCOMRAM 1CE4 0 CODE 0 idataCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+ivt0x8_base 8 0 CODE 0 ivt0x8 dist/default/debug/Heat_Controller.X.debug.o
 _ANSELA 3A40 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 _ANSELB 3A50 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
-___inthi_sp 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
-___intlo_sp 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/Heat_Controller.X.debug.o
+___fldiv@aexp 40 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___fldiv@bexp 3F 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___fldiv@sign 38 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug/Heat_Controller.X.debug.o
-start_initialization 1026 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
+__end_of_isr_enable 1CE0 0 CODE 0 text2 dist/default/debug/Heat_Controller.X.debug.o
+__end_of___fldiv 17EA 0 CODE 0 text10 dist/default/debug/Heat_Controller.X.debug.o
+__end_of___flmul 1450 0 CODE 0 text9 dist/default/debug/Heat_Controller.X.debug.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___fldiv@a 2C 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___fldiv@b 28 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___flmul@a 13 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___flmul@b F 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+_INTCON0bits 3FD2 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+start_initialization 1C48 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug/Heat_Controller.X.debug.o
+_ADC_ISR 19A0 0 CODE 0 text7 dist/default/debug/Heat_Controller.X.debug.o
 ___rparam_used 1 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
-isa$xinst 0 0 ABS 0 - /tmp/xcsiNLMda/driver_tmp_9.o
+__pcstackBANK0 60 0 BANK0 1 cstackBANK0 dist/default/debug/Heat_Controller.X.debug.o
+isa$xinst 0 0 ABS 0 - /tmp/xcOjYephg/driver_tmp_9.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/debug/Heat_Controller.X.debug.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/debug/Heat_Controller.X.debug.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/debug/Heat_Controller.X.debug.o
@@ -152,6 +521,15 @@ __Hparam 0 0 COMRAM 1 rparam dist/default/debug/Heat_Controller.X.debug.o
 __Hrdata 0 0 COMRAM 1 rdata dist/default/debug/Heat_Controller.X.debug.o
 __Hstack 0 0 STACK 2 stack dist/default/debug/Heat_Controller.X.debug.o
 __Htext0 0 0 ABS 0 text0 dist/default/debug/Heat_Controller.X.debug.o
+__Htext1 0 0 ABS 0 text1 dist/default/debug/Heat_Controller.X.debug.o
+__Htext2 0 0 ABS 0 text2 dist/default/debug/Heat_Controller.X.debug.o
+__Htext3 0 0 ABS 0 text3 dist/default/debug/Heat_Controller.X.debug.o
+__Htext4 0 0 ABS 0 text4 dist/default/debug/Heat_Controller.X.debug.o
+__Htext5 0 0 ABS 0 text5 dist/default/debug/Heat_Controller.X.debug.o
+__Htext6 0 0 ABS 0 text6 dist/default/debug/Heat_Controller.X.debug.o
+__Htext7 0 0 ABS 0 text7 dist/default/debug/Heat_Controller.X.debug.o
+__Htext8 0 0 ABS 0 text8 dist/default/debug/Heat_Controller.X.debug.o
+__Htext9 0 0 ABS 0 text9 dist/default/debug/Heat_Controller.X.debug.o
 __Hbank10 0 0 ABS 0 bank10 dist/default/debug/Heat_Controller.X.debug.o
 __Hbank11 0 0 ABS 0 bank11 dist/default/debug/Heat_Controller.X.debug.o
 __Hbank12 0 0 ABS 0 bank12 dist/default/debug/Heat_Controller.X.debug.o
@@ -161,9 +539,13 @@ __Hbank15 0 0 ABS 0 bank15 dist/default/debug/Heat_Controller.X.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug/Heat_Controller.X.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/default/debug/Heat_Controller.X.debug.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug/Heat_Controller.X.debug.o
-__smallconst 1000 0 SMALLCONST 0 smallconst /tmp/xcsiNLMda/driver_tmp_9.o
+__smallconst 1000 0 SMALLCONST 0 smallconst /tmp/xcOjYephg/driver_tmp_9.o
+___xxtofl@arg B 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___xxtofl@exp A 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___xxtofl@val 1 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Hcomram 0 0 ABS 0 comram dist/default/debug/Heat_Controller.X.debug.o
 __Hconfig 30000A 0 CONFIG 4 config dist/default/debug/Heat_Controller.X.debug.o
+_init_timers 1CB6 0 CODE 0 text4 dist/default/debug/Heat_Controller.X.debug.o
 __Lbank0 0 0 ABS 0 bank0 dist/default/debug/Heat_Controller.X.debug.o
 __Lbank1 0 0 ABS 0 bank1 dist/default/debug/Heat_Controller.X.debug.o
 __Lbank2 0 0 ABS 0 bank2 dist/default/debug/Heat_Controller.X.debug.o
@@ -183,11 +565,21 @@ __Lparam 0 0 COMRAM 1 rparam dist/default/debug/Heat_Controller.X.debug.o
 __Lrdata 0 0 COMRAM 1 rdata dist/default/debug/Heat_Controller.X.debug.o
 __Lstack 0 0 STACK 2 stack dist/default/debug/Heat_Controller.X.debug.o
 __Ltext0 0 0 ABS 0 text0 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext1 0 0 ABS 0 text1 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext2 0 0 ABS 0 text2 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext3 0 0 ABS 0 text3 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext4 0 0 ABS 0 text4 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext5 0 0 ABS 0 text5 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext6 0 0 ABS 0 text6 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext7 0 0 ABS 0 text7 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext8 0 0 ABS 0 text8 dist/default/debug/Heat_Controller.X.debug.o
+__Ltext9 0 0 ABS 0 text9 dist/default/debug/Heat_Controller.X.debug.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/debug/Heat_Controller.X.debug.o
+___flmul@grs 1C 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Habs1 0 0 ABS 0 abs1 dist/default/debug/Heat_Controller.X.debug.o
 __Hdata 0 0 ABS 0 data dist/default/debug/Heat_Controller.X.debug.o
 __Hheap 0 0 HEAP 7 heap dist/default/debug/Heat_Controller.X.debug.o
-__Hinit 10000 0 CODE 0 init dist/default/debug/Heat_Controller.X.debug.o
+__Hinit B2 0 CODE 0 init dist/default/debug/Heat_Controller.X.debug.o
 __Hrbit 0 0 COMRAM 1 rbit dist/default/debug/Heat_Controller.X.debug.o
 __Hrbss 0 0 COMRAM 1 rbss dist/default/debug/Heat_Controller.X.debug.o
 __Htemp 0 0 COMRAM 1 temp dist/default/debug/Heat_Controller.X.debug.o
@@ -195,23 +587,43 @@ __Htext 0 0 ABS 0 text dist/default/debug/Heat_Controller.X.debug.o
 __Labs1 0 0 ABS 0 abs1 dist/default/debug/Heat_Controller.X.debug.o
 __Ldata 0 0 ABS 0 data dist/default/debug/Heat_Controller.X.debug.o
 __Lheap 0 0 HEAP 7 heap dist/default/debug/Heat_Controller.X.debug.o
-__Linit FFFC 0 CODE 0 init dist/default/debug/Heat_Controller.X.debug.o
+__Linit AE 0 CODE 0 init dist/default/debug/Heat_Controller.X.debug.o
 __Lrbit 0 0 COMRAM 1 rbit dist/default/debug/Heat_Controller.X.debug.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/debug/Heat_Controller.X.debug.o
 __Ltemp 0 0 COMRAM 1 temp dist/default/debug/Heat_Controller.X.debug.o
 __Ltext 0 0 ABS 0 text dist/default/debug/Heat_Controller.X.debug.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug/Heat_Controller.X.debug.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Hirdata 0 0 CODE 0 irdata dist/default/debug/Heat_Controller.X.debug.o
-__S0 10000 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
-__S1 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+__S0 1CE6 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+__S1 61 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __S4 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __S5 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+__Hivt0x8 AE 0 CODE 0 ivt0x8 dist/default/debug/Heat_Controller.X.debug.o
+IVTBASEH 3FD6 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+IVTBASEL 3FD5 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+IVTBASEU 3FD7 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+TMR0_ISR@counter_1_s 5A 0 COMRAM 1 dataCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+TMR0_ISR@counter_100_ms 59 0 COMRAM 1 dataCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+__pivt0x8 8 0 CODE 0 ivt0x8 dist/default/debug/Heat_Controller.X.debug.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug/Heat_Controller.X.debug.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug/Heat_Controller.X.debug.o
+_flag_10_ms 58 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___xxtofl 17EA 0 CODE 0 text8 dist/default/debug/Heat_Controller.X.debug.o
 __Hramtop 1000 0 RAM 0 ramtop dist/default/debug/Heat_Controller.X.debug.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/debug/Heat_Controller.X.debug.o
-__activetblptr 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+__end_of___xxtofl 199E 0 CODE 0 text8 dist/default/debug/Heat_Controller.X.debug.o
+_flag_100_ms 57 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+__activetblptr 2 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/debug/Heat_Controller.X.debug.o
+__Htext10 0 0 ABS 0 text10 dist/default/debug/Heat_Controller.X.debug.o
+_PIE1bits 3991 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+_PIE3bits 3993 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+_TMR0_ISR 1BD0 0 CODE 0 text6 dist/default/debug/Heat_Controller.X.debug.o
+__ptext10 1450 0 CODE 0 text10 dist/default/debug/Heat_Controller.X.debug.o
+___fldiv 1450 0 CODE 0 text10 dist/default/debug/Heat_Controller.X.debug.o
+___flmul 1002 0 CODE 0 text9 dist/default/debug/Heat_Controller.X.debug.o
 __Lbank10 0 0 ABS 0 bank10 dist/default/debug/Heat_Controller.X.debug.o
 __Lbank11 0 0 ABS 0 bank11 dist/default/debug/Heat_Controller.X.debug.o
 __Lbank12 0 0 ABS 0 bank12 dist/default/debug/Heat_Controller.X.debug.o
@@ -221,47 +633,84 @@ __Lbank15 0 0 ABS 0 bank15 dist/default/debug/Heat_Controller.X.debug.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug/Heat_Controller.X.debug.o
 __Lbigram 0 0 ABS 0 bigram dist/default/debug/Heat_Controller.X.debug.o
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/debug/Heat_Controller.X.debug.o
+_isr_disable 1CE0 0 CODE 0 text3 dist/default/debug/Heat_Controller.X.debug.o
 __Lcomram 0 0 ABS 0 comram dist/default/debug/Heat_Controller.X.debug.o
 __Lconfig 0 0 CONFIG 4 config dist/default/debug/Heat_Controller.X.debug.o
+__end_of_TMR0_ISR 1C48 0 CODE 0 text6 dist/default/debug/Heat_Controller.X.debug.o
+ivt0x8_undefint AC 0 CODE 0 ivt0x8 dist/default/debug/Heat_Controller.X.debug.o
 _LATAbits 3FBA 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+___fldiv@grs 3B 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+___fldiv@rem 34 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/debug/Heat_Controller.X.debug.o
-___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
-___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
+___inthi_stack_hi 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/debug/Heat_Controller.X.debug.o
-isa$std 1 0 ABS 0 - /tmp/xcsiNLMda/driver_tmp_9.o
-stackhi 0 0 ABS 0 - /tmp/xcsiNLMda/driver_tmp_9.o
-stacklo 0 0 ABS 0 - /tmp/xcsiNLMda/driver_tmp_9.o
+isa$std 1 0 ABS 0 - /tmp/xcOjYephg/driver_tmp_9.o
+___fldiv@new_exp 39 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+_timers 4D 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+stackhi 0 0 ABS 0 - /tmp/xcOjYephg/driver_tmp_9.o
+stacklo 0 0 ABS 0 - /tmp/xcOjYephg/driver_tmp_9.o
 __Lirdata 0 0 CODE 0 irdata dist/default/debug/Heat_Controller.X.debug.o
+__Livt0x8 8 0 CODE 0 ivt0x8 dist/default/debug/Heat_Controller.X.debug.o
+_ADCON0bits 3EF8 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+_ADCON1bits 3EF9 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+_flag_1_s 56 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Lspace_0 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __Lspace_1 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __Lspace_2 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __Lspace_4 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+__pbssCOMRAM 45 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug/Heat_Controller.X.debug.o
+_PIR1bits 39A1 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+_PIR3bits 39A3 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
-end_of_initialization 1026 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
+_ADPCHbits 3EF1 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+end_of_initialization 1C7C 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug/Heat_Controller.X.debug.o
+?___fldiv 28 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+?___flmul F 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug/Heat_Controller.X.debug.o
 __Lramtop 1000 0 RAM 0 ramtop dist/default/debug/Heat_Controller.X.debug.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/debug/Heat_Controller.X.debug.o
-__pcinit 1026 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
-__ptext0 1002 0 CODE 0 text0 dist/default/debug/Heat_Controller.X.debug.o
+__pcinit 1C48 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
+__ptext0 1B54 0 CODE 0 text0 dist/default/debug/Heat_Controller.X.debug.o
+__ptext1 1ACE 0 CODE 0 text1 dist/default/debug/Heat_Controller.X.debug.o
+__ptext2 1CDA 0 CODE 0 text2 dist/default/debug/Heat_Controller.X.debug.o
+__ptext3 1CE0 0 CODE 0 text3 dist/default/debug/Heat_Controller.X.debug.o
+__ptext4 1CB6 0 CODE 0 text4 dist/default/debug/Heat_Controller.X.debug.o
+__ptext5 1C86 0 CODE 0 text5 dist/default/debug/Heat_Controller.X.debug.o
+__ptext6 1BD0 0 CODE 0 text6 dist/default/debug/Heat_Controller.X.debug.o
+__ptext7 19A0 0 CODE 0 text7 dist/default/debug/Heat_Controller.X.debug.o
+__ptext8 17EA 0 CODE 0 text8 dist/default/debug/Heat_Controller.X.debug.o
+__ptext9 1002 0 CODE 0 text9 dist/default/debug/Heat_Controller.X.debug.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/debug/Heat_Controller.X.debug.o
-__ramtop 1000 0 RAM 0 ramtop /tmp/xcsiNLMda/driver_tmp_9.o
+__Ltext10 0 0 ABS 0 text10 dist/default/debug/Heat_Controller.X.debug.o
+__ramtop 1000 0 RAM 0 ramtop /tmp/xcOjYephg/driver_tmp_9.o
+set_local_timer_flags@old_1_s 53 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/debug/Heat_Controller.X.debug.o
+?___xxtofl 1 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug/Heat_Controller.X.debug.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug/Heat_Controller.X.debug.o
 __psmallconst 1000 0 SMALLCONST 0 smallconst dist/default/debug/Heat_Controller.X.debug.o
+__end_of_set_local_timer_flags 1B54 0 CODE 0 text1 dist/default/debug/Heat_Controller.X.debug.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug/Heat_Controller.X.debug.o
-___heap_hi 0 0 ABS 0 - /tmp/xcsiNLMda/driver_tmp_9.o
-___heap_lo 0 0 ABS 0 - /tmp/xcsiNLMda/driver_tmp_9.o
+___heap_hi 0 0 ABS 0 - /tmp/xcOjYephg/driver_tmp_9.o
+___heap_lo 0 0 ABS 0 - /tmp/xcOjYephg/driver_tmp_9.o
+__end_of_init_timers 1CDA 0 CODE 0 text4 dist/default/debug/Heat_Controller.X.debug.o
 ___param_bank 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
-___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
-___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcsiNLMda/driver_tmp_9.o
+___intlo_stack_hi 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack /tmp/xcOjYephg/driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug/Heat_Controller.X.debug.o
-__end_of__initialization 1026 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
+__end_of__initialization 1C7C 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/debug/Heat_Controller.X.debug.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/debug/Heat_Controller.X.debug.o
-__pcstackCOMRAM 0 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
-__end_of_main 1026 0 CODE 0 text0 dist/default/debug/Heat_Controller.X.debug.o
+_set_local_timer_flags 1ACE 0 CODE 0 text1 dist/default/debug/Heat_Controller.X.debug.o
+__pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+_T0CON0bits 3FB8 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+_T0CON1bits 3FB9 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+_ADCLKbits 3EFF 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
+__end_of_main 1BCE 0 CODE 0 text0 dist/default/debug/Heat_Controller.X.debug.o
+_ADRES 3EEF 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 _TRISA 3FC2 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 _TRISB 3FC3 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __HRAM 0 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
@@ -272,9 +721,17 @@ __LRAM 1 0 ABS 0 - dist/default/debug/Heat_Controller.X.debug.o
 __Lbss 0 0 RAM 1 bss dist/default/debug/Heat_Controller.X.debug.o
 __Lram 0 0 ABS 0 ram dist/default/debug/Heat_Controller.X.debug.o
 __Lsfr 0 0 ABS 0 sfr dist/default/debug/Heat_Controller.X.debug.o
-__initialization 1026 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
+set_local_timer_flags@old_10_ms 55 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+set_local_timer_flags@old_100_ms 54 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+_thermistor_1 49 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+_thermistor_2 45 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+__initialization 1C48 0 CODE 0 cinit dist/default/debug/Heat_Controller.X.debug.o
+___xxtofl@sign 9 0 COMRAM 1 cstackCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+__pdataCOMRAM 59 0 COMRAM 1 dataCOMRAM dist/default/debug/Heat_Controller.X.debug.o
+ADC_ISR@F15671 50 0 COMRAM 1 bssCOMRAM dist/default/debug/Heat_Controller.X.debug.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/debug/Heat_Controller.X.debug.o
 __Hsmallconst 1002 0 SMALLCONST 0 smallconst dist/default/debug/Heat_Controller.X.debug.o
+__end_of_ADC_ISR 1ACE 0 CODE 0 text7 dist/default/debug/Heat_Controller.X.debug.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/debug/Heat_Controller.X.debug.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/Heat_Controller.X.debug.o
 # %SPLITSTAB Section
@@ -301,8 +758,12 @@ __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/Heat_Controller.X.d
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text0 0 1002 1002 2A 1
-init 0 FFFC FFFC 4 1
+ivt0x8 0 8 8 AA 1
+text6 0 1BD0 1BD0 116 1
+text7 0 19A0 19A0 22E 1
+text9 0 1002 1002 99C 1
+cstackCOMRAM 1 1 1 5A 1
+cstackBANK0 1 60 60 1 1
 reset_vec 0 0 0 4 1
 smallconst 0 1000 1000 2 1
 # %NOTES Section

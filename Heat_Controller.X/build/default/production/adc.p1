@@ -1,60 +1,103 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"45534 /Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 45534: extern volatile unsigned char TRISA __attribute__((address(0x3FC2)));
-[v _TRISA `Vuc ~T0 @X0 0 e@16322 ]
-"7467
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 7467: extern volatile unsigned char ANSELA __attribute__((address(0x3A40)));
-[v _ANSELA `Vuc ~T0 @X0 0 e@14912 ]
-"45198
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 45198: extern volatile unsigned char LATA __attribute__((address(0x3FBA)));
-[v _LATA `Vuc ~T0 @X0 0 e@16314 ]
-"45596
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 45596: extern volatile unsigned char TRISB __attribute__((address(0x3FC3)));
-[v _TRISB `Vuc ~T0 @X0 0 e@16323 ]
-"8087
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 8087: extern volatile unsigned char ANSELB __attribute__((address(0x3A50)));
-[v _ANSELB `Vuc ~T0 @X0 0 e@14928 ]
-"45310
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 45310: extern volatile unsigned char LATB __attribute__((address(0x3FBB)));
-[v _LATB `Vuc ~T0 @X0 0 e@16315 ]
-"19 ./isr.h
-[; ;./isr.h: 19: void isr_disable(void);
-[v _isr_disable `(v ~T0 @X0 0 ef ]
-"21
-[; ;./isr.h: 21: void init_timers(void);
-[v _init_timers `(v ~T0 @X0 0 ef ]
-"15 ./adc.h
-[; ;./adc.h: 15: void init_adc(void);
-[v _init_adc `(v ~T0 @X0 0 ef ]
-"20 ./isr.h
-[; ;./isr.h: 20: void isr_enable(void);
-[v _isr_enable `(v ~T0 @X0 0 ef ]
-"45204 /Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 45204:     struct {
-[s S2071 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2071 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 LATA7 ]
-"45214
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 45214:     struct {
-[s S2072 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S2072 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 LA7 ]
-"45203
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 45203: typedef union {
-[u S2070 `S2071 1 `S2072 1 ]
-[n S2070 . . . ]
-"45225
-[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 45225: extern volatile LATAbits_t LATAbits __attribute__((address(0x3FBA)));
-[v _LATAbits `VS2070 ~T0 @X0 0 e@16314 ]
-"21 main.c
-[; ;main.c: 21: void set_local_timer_flags(void);
-[v _set_local_timer_flags `(v ~T0 @X0 0 ef ]
-"9 ./isr.h
-[; ;./isr.h: 9: {
-[s S2200 `Va 1 `Va 1 `Va 1 ]
-[n S2200 Timers t_10_ms t_100_ms t_1_s ]
-"16
-[; ;./isr.h: 16: extern struct Timers timers;
-[v _timers `S2200 ~T0 @X0 0 e ]
+"30368 /Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30368:     struct {
+[s S1352 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1352 . GO . FM CS . CONT ON ]
+"30377
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30377:     struct {
+[s S1353 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1353 . ADGO . ADFM ADCS . ADCONT ADON ]
+"30386
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30386:     struct {
+[s S1354 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1354 . DONE . FM0 ]
+"30391
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30391:     struct {
+[s S1355 :1 `uc 1 ]
+[n S1355 . GO_NOT_DONE ]
+"30394
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30394:     struct {
+[s S1356 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1356 . GO_nDONE . ADFM0 ]
+"30367
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30367: typedef union {
+[u S1351 `S1352 1 `S1353 1 `S1354 1 `S1355 1 `S1356 1 ]
+[n S1351 . . . . . . ]
+"30400
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30400: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x3EF8)));
+[v _ADCON0bits `VS1351 ~T0 @X0 0 e@16120 ]
+"30486
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30486:     struct {
+[s S1358 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1358 . DSEN . GPOL IPEN PPOL ]
+"30493
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30493:     struct {
+[s S1359 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1359 . ADDSEN . ADGPOL ADIPEN ADPPOL ]
+"30485
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30485: typedef union {
+[u S1357 `S1358 1 `S1359 1 ]
+[n S1357 . . . ]
+"30501
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 30501: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0x3EF9)));
+[v _ADCON1bits `VS1357 ~T0 @X0 0 e@16121 ]
+"31159
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 31159:     struct {
+[s S1389 :6 `uc 1 ]
+[n S1389 . CS ]
+"31162
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 31162:     struct {
+[s S1390 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1390 . ADCS0 ADCS1 ADCS2 ADCS3 ADCS4 ADCS5 ]
+"31170
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 31170:     struct {
+[s S1391 :6 `uc 1 ]
+[n S1391 . ADCS ]
+"31173
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 31173:     struct {
+[s S1392 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1392 . CS0 CS1 CS2 CS3 CS4 CS5 ]
+"31158
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 31158: typedef union {
+[u S1388 `S1389 1 `S1390 1 `S1391 1 `S1392 1 ]
+[n S1388 . . . . . ]
+"31182
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 31182: extern volatile ADCLKbits_t ADCLKbits __attribute__((address(0x3EFF)));
+[v _ADCLKbits `VS1388 ~T0 @X0 0 e@16127 ]
+"29718
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 29718:     struct {
+[s S1322 :6 `uc 1 ]
+[n S1322 . ADPCH ]
+"29721
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 29721:     struct {
+[s S1323 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1323 . ADPCH0 ADPCH1 ADPCH2 ADPCH3 ADPCH4 ADPCH5 ]
+"29729
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 29729:     struct {
+[s S1324 :6 `uc 1 ]
+[n S1324 . PCH ]
+"29732
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 29732:     struct {
+[s S1325 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1325 . PCH0 PCH1 PCH2 PCH3 PCH4 PCH5 ]
+"29717
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 29717: typedef union {
+[u S1321 `S1322 1 `S1323 1 `S1324 1 `S1325 1 ]
+[n S1321 . . . . . ]
+"29741
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 29741: extern volatile ADPCHbits_t ADPCHbits __attribute__((address(0x3EF1)));
+[v _ADPCHbits `VS1321 ~T0 @X0 0 e@16113 ]
+"3398
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 3398:     struct {
+[s S152 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S152 . INT0IE ZCDIE ADIE ADTIE C1IE SMT1IE SMT1PRAIE SMT1PWAIE ]
+"3397
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 3397: typedef union {
+[u S151 `S152 1 ]
+[n S151 . . ]
+"3409
+[; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 3409: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x3991)));
+[v _PIE1bits `VS151 ~T0 @X0 0 e@14737 ]
 "250 /Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h
 [; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 250: __asm("STATUS_CSHAD equ 03880h");
 [; <" STATUS_CSHAD equ 03880h ;# ">
@@ -2224,326 +2267,52 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47367
 [; ;/Users/rodrigobaeta/.mchp_packs/Microchip/PIC18F-K_DFP/1.13.292/xc8/pic/include/proc/pic18f26k42.h: 47367: __asm("TOSU equ 03FFFh");
 [; <" TOSU equ 03FFFh ;# ">
-"19 ./config.h
-[p x FEXTOSC  =  OFF     ]
-"20
-[p x RSTOSC  =  HFINTOSC_64MHZ ]
-"23
-[p x CLKOUTEN  =  OFF    ]
-"24
-[p x PR1WAY  =  ON       ]
-"25
-[p x CSWEN  =  ON        ]
-"26
-[p x FCMEN  =  ON        ]
-"29
-[p x MCLRE  =  EXTMCLR   ]
-"30
-[p x PWRTS  =  PWRT_OFF  ]
-"31
-[p x MVECEN  =  ON       ]
-"32
-[p x IVT1WAY  =  ON      ]
-"33
-[p x LPBOREN  =  OFF     ]
-"34
-[p x BOREN  =  SBORDIS   ]
-"37
-[p x BORV  =  VBOR_2P45  ]
-"38
-[p x ZCD  =  OFF         ]
-"39
-[p x PPS1WAY  =  ON      ]
-"40
-[p x STVREN  =  ON       ]
-"41
-[p x DEBUG  =  OFF       ]
-"42
-[p x XINST  =  OFF       ]
-"45
-[p x WDTCPS  =  WDTCPS_31 ]
-"46
-[p x WDTE  =  ON         ]
-"49
-[p x WDTCWS  =  WDTCWS_7 ]
-"50
-[p x WDTCCS  =  SC       ]
-"53
-[p x BBSIZE  =  BBSIZE_512 ]
-"54
-[p x BBEN  =  OFF        ]
-"55
-[p x SAFEN  =  OFF       ]
-"56
-[p x WRTAPP  =  OFF      ]
-"59
-[p x WRTB  =  OFF        ]
-"60
-[p x WRTC  =  OFF        ]
-"61
-[p x WRTD  =  OFF        ]
-"62
-[p x WRTSAF  =  OFF      ]
-"63
-[p x LVP  =  ON          ]
-"66
-[p x CP  =  OFF          ]
-"16 main.c
-[; ;main.c: 16: static _Bool flag_10_ms = 0;
-[v _flag_10_ms `a ~T0 @X0 1 s ]
-[i _flag_10_ms
--> -> 0 `i `a
-]
+"10 adc.c
+[; ;adc.c: 10: void init_adc(void) {
+[v _init_adc `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_adc ]
+[f ]
+"11
+[; ;adc.c: 11:  ADCON0bits.ON = 0;
+[e = . . _ADCON0bits 0 6 -> -> 0 `i `uc ]
+"13
+[; ;adc.c: 13:  ADCON0bits.CONT = 0;
+[e = . . _ADCON0bits 0 5 -> -> 0 `i `uc ]
+"14
+[; ;adc.c: 14:  ADCON0bits.CS = 0;
+[e = . . _ADCON0bits 0 3 -> -> 0 `i `uc ]
+"15
+[; ;adc.c: 15:  ADCON0bits.FM = 1;
+[e = . . _ADCON0bits 0 2 -> -> 1 `i `uc ]
 "17
-[; ;main.c: 17: static _Bool flag_100_ms = 0;
-[v _flag_100_ms `a ~T0 @X0 1 s ]
-[i _flag_100_ms
--> -> 0 `i `a
-]
+[; ;adc.c: 17:  ADCON1bits.PPOL = 1;
+[e = . . _ADCON1bits 0 4 -> -> 1 `i `uc ]
 "18
-[; ;main.c: 18: static _Bool flag_1_s = 0;
-[v _flag_1_s `a ~T0 @X0 1 s ]
-[i _flag_1_s
--> -> 0 `i `a
-]
-[v $root$_main `(v ~T0 @X0 0 e ]
+[; ;adc.c: 18:  ADCON1bits.IPEN = 0;
+[e = . . _ADCON1bits 0 3 -> -> 0 `i `uc ]
+"19
+[; ;adc.c: 19:  ADCON1bits.GPOL = 0;
+[e = . . _ADCON1bits 0 2 -> -> 0 `i `uc ]
+"20
+[; ;adc.c: 20:  ADCON1bits.DSEN = 0;
+[e = . . _ADCON1bits 0 0 -> -> 0 `i `uc ]
+"22
+[; ;adc.c: 22:  ADCLKbits.CS = 0b111111;
+[e = . . _ADCLKbits 0 0 -> -> 63 `i `uc ]
 "23
-[; ;main.c: 23: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"24
-[; ;main.c: 24: {
-{
-[e :U _main ]
-[f ]
+[; ;adc.c: 23:  ADPCHbits.PCH = 0b000010;
+[e = . . _ADPCHbits 2 0 -> -> 2 `i `uc ]
 "25
-[; ;main.c: 25:     TRISA = 0b00000000;
-[e = _TRISA -> -> 0 `i `uc ]
-"26
-[; ;main.c: 26:     ANSELA = 0;
-[e = _ANSELA -> -> 0 `i `uc ]
+[; ;adc.c: 25:  PIE1bits.ADIE = 1;
+[e = . . _PIE1bits 0 2 -> -> 1 `i `uc ]
 "27
-[; ;main.c: 27:     LATA = 0;
-[e = _LATA -> -> 0 `i `uc ]
+[; ;adc.c: 27:  ADCON0bits.ON = 1;
+[e = . . _ADCON0bits 0 6 -> -> 1 `i `uc ]
 "28
-[; ;main.c: 28:     TRISB = 0b00000000;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;adc.c: 28:  ADCON0bits.GO = 1;
+[e = . . _ADCON0bits 0 0 -> -> 1 `i `uc ]
 "29
-[; ;main.c: 29:     ANSELB = 0;
-[e = _ANSELB -> -> 0 `i `uc ]
-"30
-[; ;main.c: 30:     LATB = 0;
-[e = _LATB -> -> 0 `i `uc ]
-"32
-[; ;main.c: 32:  isr_disable();
-[e ( _isr_disable ..  ]
-"33
-[; ;main.c: 33:  init_timers();
-[e ( _init_timers ..  ]
-"34
-[; ;main.c: 34:  init_adc();
-[e ( _init_adc ..  ]
-"35
-[; ;main.c: 35:  isr_enable();
-[e ( _isr_enable ..  ]
-"38
-[; ;main.c: 38:     LATAbits.LATA7 = 0;
-[e = . . _LATAbits 0 7 -> -> 0 `i `uc ]
-"40
-[; ;main.c: 40:     while(1)
-[e :U 2203 ]
-"41
-[; ;main.c: 41:     {
-{
-"42
-[; ;main.c: 42:   set_local_timer_flags();
-[e ( _set_local_timer_flags ..  ]
-"45
-[; ;main.c: 45:   if (flag_10_ms)
-[e $ ! != -> _flag_10_ms `i -> 0 `i 2205  ]
-"46
-[; ;main.c: 46:   {
-{
-"48
-[; ;main.c: 48:   }
-}
-[e :U 2205 ]
-"50
-[; ;main.c: 50:   if (flag_100_ms)
-[e $ ! != -> _flag_100_ms `i -> 0 `i 2206  ]
-"51
-[; ;main.c: 51:   {
-{
-"52
-[; ;main.c: 52:   }
-}
-[e :U 2206 ]
-"54
-[; ;main.c: 54:   if (flag_1_s)
-[e $ ! != -> _flag_1_s `i -> 0 `i 2207  ]
-"55
-[; ;main.c: 55:   {
-{
-"56
-[; ;main.c: 56:   }
-}
-[e :U 2207 ]
-"59
-[; ;main.c: 59:   if (flag_10_ms)
-[e $ ! != -> _flag_10_ms `i -> 0 `i 2208  ]
-"60
-[; ;main.c: 60:   {
-{
-"61
-[; ;main.c: 61:   }
-}
-[e :U 2208 ]
-"63
-[; ;main.c: 63:   if (flag_100_ms)
-[e $ ! != -> _flag_100_ms `i -> 0 `i 2209  ]
-"64
-[; ;main.c: 64:   {
-{
-"65
-[; ;main.c: 65:   }
-}
-[e :U 2209 ]
-"67
-[; ;main.c: 67:   if (flag_1_s)
-[e $ ! != -> _flag_1_s `i -> 0 `i 2210  ]
-"68
-[; ;main.c: 68:   {
-{
-"69
-[; ;main.c: 69:   }
-}
-[e :U 2210 ]
-"72
-[; ;main.c: 72:   if (flag_10_ms)
-[e $ ! != -> _flag_10_ms `i -> 0 `i 2211  ]
-"73
-[; ;main.c: 73:   {
-{
-"74
-[; ;main.c: 74:   }
-}
-[e :U 2211 ]
-"76
-[; ;main.c: 76:   if (flag_100_ms)
-[e $ ! != -> _flag_100_ms `i -> 0 `i 2212  ]
-"77
-[; ;main.c: 77:   {
-{
-"78
-[; ;main.c: 78:    LATAbits.LATA7 = !LATAbits.LATA7;
-[e = . . _LATAbits 0 7 -> -> ! != -> . . _LATAbits 0 7 `i -> 0 `i `i `uc ]
-"79
-[; ;main.c: 79:   }
-}
-[e :U 2212 ]
-"81
-[; ;main.c: 81:   if (flag_1_s)
-[e $ ! != -> _flag_1_s `i -> 0 `i 2213  ]
-"82
-[; ;main.c: 82:   {
-{
-"83
-[; ;main.c: 83:   }
-}
-[e :U 2213 ]
-"86
-[; ;main.c: 86:   flag_10_ms = 0;
-[e = _flag_10_ms -> -> 0 `i `a ]
-"87
-[; ;main.c: 87:   flag_100_ms = 0;
-[e = _flag_100_ms -> -> 0 `i `a ]
-"88
-[; ;main.c: 88:   flag_1_s = 0;
-[e = _flag_1_s -> -> 0 `i `a ]
-"89
-[; ;main.c: 89:     }
-}
-[e :U 2202 ]
-[e $U 2203  ]
-[e :U 2204 ]
-"90
-[; ;main.c: 90: }
-[e :UE 2201 ]
-}
-"92
-[; ;main.c: 92: void set_local_timer_flags(void)
-[v _set_local_timer_flags `(v ~T0 @X0 1 ef ]
-"93
-[; ;main.c: 93: {
-{
-[e :U _set_local_timer_flags ]
-[f ]
-"94
-[; ;main.c: 94:   static _Bool old_10_ms = 0;
-[v F15649 `a ~T0 @X0 1 s old_10_ms ]
-[i F15649
--> -> 0 `i `a
-]
-"95
-[; ;main.c: 95:   static _Bool old_100_ms = 0;
-[v F15650 `a ~T0 @X0 1 s old_100_ms ]
-[i F15650
--> -> 0 `i `a
-]
-"96
-[; ;main.c: 96:   static _Bool old_1_s = 0;
-[v F15651 `a ~T0 @X0 1 s old_1_s ]
-[i F15651
--> -> 0 `i `a
-]
-"100
-[; ;main.c: 100:   if (old_10_ms != timers.t_10_ms)
-[e $ ! != -> F15649 `i -> . _timers 0 `i 2215  ]
-"101
-[; ;main.c: 101:   {
-{
-"102
-[; ;main.c: 102:     old_10_ms = !old_10_ms;
-[e = F15649 -> -> ! != -> F15649 `i -> 0 `i `i `a ]
-"103
-[; ;main.c: 103:     flag_10_ms = 1;
-[e = _flag_10_ms -> -> 1 `i `a ]
-"104
-[; ;main.c: 104:   }
-}
-[e :U 2215 ]
-"106
-[; ;main.c: 106:   if (old_100_ms != timers.t_100_ms)
-[e $ ! != -> F15650 `i -> . _timers 1 `i 2216  ]
-"107
-[; ;main.c: 107:   {
-{
-"108
-[; ;main.c: 108:     old_100_ms = !old_100_ms;
-[e = F15650 -> -> ! != -> F15650 `i -> 0 `i `i `a ]
-"109
-[; ;main.c: 109:     flag_100_ms = 1;
-[e = _flag_100_ms -> -> 1 `i `a ]
-"110
-[; ;main.c: 110:   }
-}
-[e :U 2216 ]
-"112
-[; ;main.c: 112:   if (old_1_s != timers.t_1_s)
-[e $ ! != -> F15651 `i -> . _timers 2 `i 2217  ]
-"113
-[; ;main.c: 113:   {
-{
-"114
-[; ;main.c: 114:     old_1_s = !old_1_s;
-[e = F15651 -> -> ! != -> F15651 `i -> 0 `i `i `a ]
-"115
-[; ;main.c: 115:     flag_1_s = 1;
-[e = _flag_1_s -> -> 1 `i `a ]
-"116
-[; ;main.c: 116:   }
-}
-[e :U 2217 ]
-"117
-[; ;main.c: 117: }
-[e :UE 2214 ]
+[; ;adc.c: 29: }
+[e :UE 2200 ]
 }
